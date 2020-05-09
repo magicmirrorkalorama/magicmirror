@@ -26,19 +26,10 @@ Module.register('joystick', {
   },
 
   scheduleUpdateInterval: function () {
+    this.updateDom()
     this.timer = setInterval(() => {
       this.updateDom()
     }, this.config.updateInterval)
-  },
-
-  scheduleUpdate: function () {
-    let nextLoad = this.config.updateInterval
-    if (typeof delay !== 'undefined' && delay >= 0) {
-      nextLoad = delay
-    }
-    setTimeout(() => {
-      this.getData()
-    }, nextLoad)
   },
 
   stop: function () {
