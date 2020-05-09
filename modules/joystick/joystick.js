@@ -7,7 +7,7 @@
 Module.register('joystick', {
   defaults: {
     position: 'neutral',
-    updateInterval: 500
+    updateInterval: 5000
   },
 
   start: function () {
@@ -21,21 +21,24 @@ Module.register('joystick', {
       this.updatePosition(payload)
     }
     if (notification === 'BUTTON_PRESS') {
-      Log.log('BUTTON PRESS', payload)
+      this.updateButton(payload)
     }
-    Log.log('NOTIFICATION RECEIVED')
   },
 
   scheduleUpdateInterval: function () {
-    this.updateDom()
-
     this.timer = setInterval(() => {
       this.updateDom()
-
-      if (this.config.position) {
-        this.sendNotification('JOYSTICK_POSITION', this.config.position)
-      }
     }, this.config.updateInterval)
+  },
+
+  scheduleUpdate: function () {
+    let nextLoad = this.config.updateInterval
+    if (typeof delay !== 'undefined' && delay >= 0) {
+      nextLoad = delay
+    }
+    setTimeout(() => {
+      this.getData()
+    }, nextLoad)
   },
 
   stop: function () {
@@ -45,10 +48,16 @@ Module.register('joystick', {
   updatePosition: function (payload) {
     Log.log('POSITION CHANGED --', payload)
     this.config.position = payload
+    this.updateDom()
   },
 
+  updateButton: function (payload) {
+    Log.log('BUTTON STATUS CHANGED --', payload)
+    this.config.button = payload
+    this.updateDom()
+  }
+
   getDom: function () {
-    Log.log('DOM UPDATED..')
     const wrapper = document.createElement('div')
     wrapper.innerHTML = JSON.stringify(this.config)
     return wrapper
