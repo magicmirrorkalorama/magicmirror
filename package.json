@@ -4,8 +4,8 @@
   "description": "The open source modular smart mirror platform.",
   "main": "js/electron.js",
   "scripts": {
-    "start": "electron js/electron.js",
-    "server": "sudo node ./serveronly",
+    "start": "electron --no-sandbox js/electron.js",
+    "server": "node ./serveronly",
     "install": "echo \"Installing vendor files ...\n\" && cd vendor && npm install --loglevel=error",
     "install-fonts": "echo \"Installing fonts ...\n\" && cd fonts && npm install --loglevel=error",
     "postinstall": "npm run install-fonts && echo \"MagicMirror installation finished successfully! \n\"",
