@@ -36,22 +36,16 @@ var config = {
 
   modules: [
     {
-      module: 'alert',
-      config: {
-        display_time: 2000
-      }
+      module: 'alert'
     },
     {
-      module: 'MMM-Remote-Control',
-      config: {
-        showModuleApiMenu: true
-      }
+      module: 'MMM-Remote-Control'
     },
     {
       module: 'MMM-DailyPokemon',
-      position: 'top_center',
+      position: 'top_left',
       config: {
-        updateInterval: 20000,
+        updateInterval: 30000,
         grayscale: false, //Turns pokemon image and type images gray to match magic mirror styles
         minPoke: 1, //Default to all pokemon
         maxPoke: 649, //Highest number - 802 pokemon currently exist
