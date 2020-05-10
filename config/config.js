@@ -75,7 +75,9 @@ var config = {
               notification: 'REMOTE_ACTION',
               payload: { action: 'SHOW_ALERT' },
               title: 'ALERT',
-              message: 'RED BUTTON'
+              message: 'RED BUTTON',
+              timer: 1,
+              type: 'notification'
             }
           },
           {
@@ -86,7 +88,9 @@ var config = {
               notification: 'REMOTE_ACTION',
               payload: { action: 'SHOW_ALERT' },
               title: 'ALERT',
-              message: 'BLACK BUTTON'
+              message: 'BLACK BUTTON',
+              timer: 1,
+              type: 'notification'
             }
           },
           {
@@ -97,7 +101,9 @@ var config = {
               notification: 'REMOTE_ACTION',
               payload: { action: 'SHOW_ALERT' },
               title: 'ALERT',
-              message: 'JOYSTICK UP'
+              message: 'JOYSTICK UP',
+              timer: 1,
+              type: 'notification'
             }
           },
           {
@@ -108,7 +114,9 @@ var config = {
               notification: 'REMOTE_ACTION',
               payload: { action: 'SHOW_ALERT' },
               title: 'ALERT',
-              message: 'JOYSTICK DOWN'
+              message: 'JOYSTICK DOWN',
+              timer: 1,
+              type: 'notification'
             }
           }
         ]
