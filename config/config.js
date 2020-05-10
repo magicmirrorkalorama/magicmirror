@@ -86,11 +86,13 @@ var config = {
             longPress: undefined,
             shortPress: {
               notification: 'REMOTE_ACTION',
-              action: 'SHOW_ALERT',
-              title: 'ALERT',
-              message: 'BLACK BUTTON',
-              timer: 1,
-              type: 'notification'
+              payload: {
+                action: 'SHOW_ALERT',
+                title: 'ALERT',
+                message: 'BLACK BUTTON',
+                timer: 1,
+                type: 'notification'
+              }
             }
           },
           {
