@@ -74,7 +74,7 @@ var config = {
             shortPress: {
               notification: 'REMOTE_ACTION',
               payload: {
-                action: 'SHOW_ALERT',
+                action: 'NOTIFICATION',
                 title: 'ALERT',
                 message: 'RED BUTTON',
                 timer: 1,
@@ -89,7 +89,7 @@ var config = {
             shortPress: {
               notification: 'REMOTE_ACTION',
               payload: {
-                action: 'SHOW_ALERT',
+                action: 'NOTIFICATION',
                 title: 'ALERT',
                 message: 'BLACK BUTTON',
                 timer: 1,
@@ -104,7 +104,7 @@ var config = {
             shortPress: {
               notification: 'REMOTE_ACTION',
               payload: {
-                action: 'SHOW_ALERT',
+                action: 'NOTIFICATION',
                 title: 'ALERT',
                 message: 'JOYSTICK UP',
                 timer: 1,
@@ -119,7 +119,7 @@ var config = {
             shortPress: {
               notification: 'REMOTE_ACTION',
               payload: {
-                action: 'SHOW_ALERT',
+                action: 'NOTIFICATION',
                 title: 'ALERT',
                 message: 'JOYSTICK DOWN',
                 timer: 1,
