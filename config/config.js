@@ -64,7 +64,9 @@ var config = {
             name: 'RED',
             longPress: {
               notification: 'SHOW_ALERT',
-              payload: { message: 'REDDDDDDDD' }
+              payload: { message: 'REDDDDDDDD' },
+              title: 'TEST',
+              message: 'RED BUTTON'
             },
             shortPress: {
               notification: 'SHOW_ALERT',
@@ -76,7 +78,9 @@ var config = {
             name: 'GREEN',
             longPress: {
               notification: 'SHOW_ALERT',
-              payload: { message: 'GREEEEEN' }
+              payload: { message: 'GREEEEEN' },
+              title: 'TEST',
+              message: 'GREEN BUTTON'
             },
             shortPress: {
               notification: 'SHOW_ALERT',
