@@ -6,33 +6,37 @@ module.exports = NodeHelper.create({
     this.position = 'neutral'
     this.button = ''
 
-    this.JoystickUp = new Gpio(27, {
-      mode: Gpio.INPUT,
-      pullUpDown: Gpio.PUD_UP,
-      edge: Gpio.EITHER_EDGE,
-      alert: true
-    })
+    try {
+      this.JoystickUp = new Gpio(27, {
+        mode: Gpio.INPUT,
+        pullUpDown: Gpio.PUD_UP,
+        edge: Gpio.EITHER_EDGE,
+        alert: true
+      })
 
-    this.JoystickDown = new Gpio(22, {
-      mode: Gpio.INPUT,
-      pullUpDown: Gpio.PUD_UP,
-      edge: Gpio.EITHER_EDGE,
-      alert: true
-    })
+      this.JoystickDown = new Gpio(22, {
+        mode: Gpio.INPUT,
+        pullUpDown: Gpio.PUD_UP,
+        edge: Gpio.EITHER_EDGE,
+        alert: true
+      })
 
-    this.ButtonA = new Gpio(17, {
-      mode: Gpio.INPUT,
-      pullUpDown: Gpio.PUD_UP,
-      edge: Gpio.EITHER_EDGE,
-      alert: true
-    })
+      this.ButtonA = new Gpio(17, {
+        mode: Gpio.INPUT,
+        pullUpDown: Gpio.PUD_UP,
+        edge: Gpio.EITHER_EDGE,
+        alert: true
+      })
 
-    this.ButtonB = new Gpio(23, {
-      pullUpDown: Gpio.PUD_UP,
-      mode: Gpio.INPUT,
-      edge: Gpio.EITHER_EDGE,
-      alert: true
-    })
+      this.ButtonB = new Gpio(23, {
+        pullUpDown: Gpio.PUD_UP,
+        mode: Gpio.INPUT,
+        edge: Gpio.EITHER_EDGE,
+        alert: true
+      })
+    } catch (err) {
+      console.error(err)
+    }
 
     this.setupListeners = () => {
       this.JoystickUp.on('alert', level => {
@@ -64,9 +68,15 @@ module.exports = NodeHelper.create({
     }
   },
 
+  socketNotificationReceived: function (notification, payload) {
+    if (notification === 'CONFIG') {
+      this.config = payload.config
+      this.initialize
+    }
+  },
+
   start: function () {
     this.setupListeners()
     this.setupGlitchFilters()
-    console.log('Joystick helper module started.')
   }
 })
