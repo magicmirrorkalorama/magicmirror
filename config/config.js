@@ -71,12 +71,12 @@ var config = {
     {
       module: 'MMM-Buttons',
       config: {
+        minLongPressTime: 0,
         buttons: [
           {
             pin: 17,
             name: 'BUTTON_RED',
-            longPress: {},
-            shortPress: {
+            longPress: {
               notification: 'REMOTE_ACTION',
               payload: { action: 'SHOW_ALERT' },
               title: 'ALERT',
@@ -86,8 +86,7 @@ var config = {
           {
             pin: 23,
             name: 'BUTTON_BLACK',
-            longPress: {},
-            shortPress: {
+            longPress: {
               notification: 'REMOTE_ACTION',
               payload: { action: 'SHOW_ALERT' },
               title: 'ALERT',
@@ -97,8 +96,7 @@ var config = {
           {
             pin: 27,
             name: 'JOYSTICK_UP',
-            longPress: {},
-            shortPress: {
+            longPress: {
               notification: 'REMOTE_ACTION',
               payload: { action: 'SHOW_ALERT' },
               title: 'ALERT',
@@ -108,8 +106,7 @@ var config = {
           {
             pin: 22,
             name: 'JOYSTICK_DOWN',
-            longPress: {},
-            shortPress: {
+            longPress: {
               notification: 'REMOTE_ACTION',
               payload: { action: 'SHOW_ALERT' },
               title: 'ALERT',
