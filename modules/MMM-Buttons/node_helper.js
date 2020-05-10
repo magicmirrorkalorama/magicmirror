@@ -67,7 +67,7 @@ module.exports = NodeHelper.create({
     }
   },
 
-  intializeButton: function (index, indexIoOptions) {
+  intializeButton: function (index) {
     const self = this
 
     var options = {
@@ -75,12 +75,7 @@ module.exports = NodeHelper.create({
       activeLow: !!self.buttons[index].activeLow
     }
 
-    var pir = new Gpio(
-      self.buttons[index].pin,
-      'low',
-      ...indexIoOptions,
-      options
-    )
+    var pir = new Gpio(self.buttons[index].pin, 'in', options)
     pir.watch(this.watchHandler(index))
   },
 
@@ -101,7 +96,7 @@ module.exports = NodeHelper.create({
           self.buttons[i].pin
       )
       self.buttons[i].pressed = undefined
-      self.intializeButton(i, self.buttons[i].io)
+      self.intializeButton(i)
     }
 
     self.loaded = true
