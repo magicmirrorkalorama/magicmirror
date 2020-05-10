@@ -63,24 +63,24 @@ var config = {
             pin: 17,
             name: 'RED',
             longPress: {
-              notification: 'TEST',
-              payload: { action: 'REDDDDDDDD' }
+              notification: 'SHOW_ALERT',
+              payload: { message: 'REDDDDDDDD' }
             },
             shortPress: {
-              notification: 'TEST',
-              payload: { action: 'RED' }
+              notification: 'SHOW_ALERT',
+              payload: { message: 'RED' }
             }
           },
           {
             pin: 23,
             name: 'GREEN',
             longPress: {
-              notification: 'TEST',
-              payload: { action: 'GREEEEEN' }
+              notification: 'SHOW_ALERT',
+              payload: { message: 'GREEEEEN' }
             },
             shortPress: {
-              notification: 'TEST',
-              payload: { action: 'GREEN' }
+              notification: 'SHOW_ALERT',
+              payload: { message: 'GREEN' }
             }
           }
         ]
