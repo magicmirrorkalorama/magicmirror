@@ -63,6 +63,7 @@ var config = {
         bounceTimeout: 0,
         buttons: [
           {
+            io: ['low', 'in'],
             pin: 17,
             name: 'BUTTON_RED',
             longPress: undefined,
@@ -78,6 +79,7 @@ var config = {
             }
           },
           {
+            io: ['low', 'in'],
             pin: 23,
             name: 'BUTTON_BLACK',
             longPress: undefined,
@@ -93,6 +95,7 @@ var config = {
             }
           },
           {
+            io: ['low', 'in'],
             pin: 27,
             name: 'JOYSTICK_UP',
             longPress: undefined,
@@ -108,6 +111,7 @@ var config = {
             }
           },
           {
+            io: ['low', 'in'],
             pin: 22,
             name: 'JOYSTICK_DOWN',
             longPress: undefined,
