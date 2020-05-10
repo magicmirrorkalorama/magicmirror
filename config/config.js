@@ -73,7 +73,7 @@ var config = {
             longPress: undefined,
             shortPress: {
               notification: 'REMOTE_ACTION',
-              payload: { action: 'SHOW_ALERT' },
+              action: 'SHOW_ALERT',
               title: 'ALERT',
               message: 'RED BUTTON',
               timer: 1,
@@ -86,7 +86,7 @@ var config = {
             longPress: undefined,
             shortPress: {
               notification: 'REMOTE_ACTION',
-              payload: { action: 'SHOW_ALERT' },
+              action: 'SHOW_ALERT',
               title: 'ALERT',
               message: 'BLACK BUTTON',
               timer: 1,
@@ -99,7 +99,7 @@ var config = {
             longPress: undefined,
             shortPress: {
               notification: 'REMOTE_ACTION',
-              payload: { action: 'SHOW_ALERT' },
+              action: 'SHOW_ALERT',
               title: 'ALERT',
               message: 'JOYSTICK UP',
               timer: 1,
@@ -112,7 +112,7 @@ var config = {
             longPress: undefined,
             shortPress: {
               notification: 'REMOTE_ACTION',
-              payload: { action: 'SHOW_ALERT' },
+              action: 'SHOW_ALERT',
               title: 'ALERT',
               message: 'JOYSTICK DOWN',
               timer: 1,
