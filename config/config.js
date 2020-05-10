@@ -36,7 +36,11 @@ var config = {
 
   modules: [
     {
-      module: 'alert'
+      module: 'alert',
+      position: 'top_bar',
+      config: {
+        display_time: 2000
+      }
     },
     {
       module: 'updatenotification',
@@ -76,8 +80,7 @@ var config = {
             shortPress: {
               notification: 'SHOW_ALERT',
               payload: { message: 'BUTTON_RED' },
-              title: 'ALERT',
-              timer: 2000
+              title: 'ALERT'
             }
           },
           {
@@ -87,8 +90,7 @@ var config = {
             shortPress: {
               notification: 'SHOW_ALERT',
               payload: { message: 'BUTTON_BLACK' },
-              title: 'ALERT',
-              timer: 2000
+              title: 'ALERT'
             }
           },
           {
@@ -98,8 +100,7 @@ var config = {
             shortPress: {
               notification: 'SHOW_ALERT',
               payload: { message: 'JOYSTICK_UP' },
-              title: 'ALERT',
-              timer: 2000
+              title: 'ALERT'
             }
           },
           {
@@ -109,8 +110,7 @@ var config = {
             shortPress: {
               notification: 'SHOW_ALERT',
               payload: { message: 'JOYSTICK_DOWN' },
-              title: 'ALERT',
-              timer: 2000
+              title: 'ALERT'
             }
           }
         ]
