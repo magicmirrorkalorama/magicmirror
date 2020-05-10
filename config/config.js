@@ -73,11 +73,13 @@ var config = {
             longPress: undefined,
             shortPress: {
               notification: 'REMOTE_ACTION',
-              action: 'SHOW_ALERT',
-              title: 'ALERT',
-              message: 'RED BUTTON',
-              timer: 1,
-              type: 'notification'
+              payload: {
+                action: 'SHOW_ALERT',
+                title: 'ALERT',
+                message: 'RED BUTTON',
+                timer: 1,
+                type: 'notification'
+              }
             }
           },
           {
@@ -101,11 +103,13 @@ var config = {
             longPress: undefined,
             shortPress: {
               notification: 'REMOTE_ACTION',
-              action: 'SHOW_ALERT',
-              title: 'ALERT',
-              message: 'JOYSTICK UP',
-              timer: 1,
-              type: 'notification'
+              payload: {
+                action: 'SHOW_ALERT',
+                title: 'ALERT',
+                message: 'JOYSTICK UP',
+                timer: 1,
+                type: 'notification'
+              }
             }
           },
           {
@@ -114,11 +118,13 @@ var config = {
             longPress: undefined,
             shortPress: {
               notification: 'REMOTE_ACTION',
-              action: 'SHOW_ALERT',
-              title: 'ALERT',
-              message: 'JOYSTICK DOWN',
-              timer: 1,
-              type: 'notification'
+              payload: {
+                action: 'SHOW_ALERT',
+                title: 'ALERT',
+                message: 'JOYSTICK DOWN',
+                timer: 1,
+                type: 'notification'
+              }
             }
           }
         ]
