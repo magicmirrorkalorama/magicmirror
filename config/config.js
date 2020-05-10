@@ -36,8 +36,18 @@ var config = {
 
   modules: [
     {
+      module: 'alert'
+    },
+    {
       module: 'updatenotification',
       position: 'top_bar'
+    },
+    {
+      module: 'MMM-Remote-Control',
+      position: 'bottom_left',
+      config: {
+        showModuleApiMenu: true
+      }
     },
     {
       module: 'MMM-DailyPokemon',
