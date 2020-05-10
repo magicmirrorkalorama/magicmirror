@@ -37,7 +37,6 @@ var config = {
   modules: [
     {
       module: 'alert',
-      position: 'top_bar',
       config: {
         display_time: 2000
       }
@@ -78,9 +77,10 @@ var config = {
             name: 'BUTTON_RED',
             longPress: {},
             shortPress: {
-              notification: 'SHOW_ALERT',
-              payload: { message: 'BUTTON_RED' },
-              title: 'ALERT'
+              notification: 'REMOTE_ACTION',
+              payload: { action: 'SHOW_ALERT' },
+              title: 'ALERT',
+              message: 'RED BUTTON'
             }
           },
           {
@@ -88,9 +88,10 @@ var config = {
             name: 'BUTTON_BLACK',
             longPress: {},
             shortPress: {
-              notification: 'SHOW_ALERT',
-              payload: { message: 'BUTTON_BLACK' },
-              title: 'ALERT'
+              notification: 'REMOTE_ACTION',
+              payload: { action: 'SHOW_ALERT' },
+              title: 'ALERT',
+              message: 'BLACK BUTTON'
             }
           },
           {
@@ -98,9 +99,10 @@ var config = {
             name: 'JOYSTICK_UP',
             longPress: {},
             shortPress: {
-              notification: 'SHOW_ALERT',
-              payload: { message: 'JOYSTICK_UP' },
-              title: 'ALERT'
+              notification: 'REMOTE_ACTION',
+              payload: { action: 'SHOW_ALERT' },
+              title: 'ALERT',
+              message: 'JOYSTICK UP'
             }
           },
           {
@@ -108,9 +110,10 @@ var config = {
             name: 'JOYSTICK_DOWN',
             longPress: {},
             shortPress: {
-              notification: 'SHOW_ALERT',
-              payload: { message: 'JOYSTICK_DOWN' },
-              title: 'ALERT'
+              notification: 'REMOTE_ACTION',
+              payload: { action: 'SHOW_ALERT' },
+              title: 'ALERT',
+              message: 'JOYSTICK DOWN'
             }
           }
         ]
