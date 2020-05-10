@@ -1,8 +1,7 @@
 # Various Node ignoramuses.
 
 logs
-*.log
-npm-debug.log*
+*.log*
 pids
 *.pid
 *.seed
@@ -12,13 +11,9 @@ coverage
 .lock-wscript
 build/Release
 node_modules
-/node_modules/**/*
-fonts/node_modules/**/*
-vendor/node_modules/**/*
 jspm_modules
 .npm
 .node_repl_history
-node_modules
 
 # Visual Studio Code ignoramuses.
 .vscode/
@@ -29,7 +24,6 @@ node_modules
 # Various Windows ignoramuses.
 Thumbs.db
 ehthumbs.db
-Desktop.ini
 $RECYCLE.BIN/
 *.cab
 *.msi
@@ -51,8 +45,6 @@ Icon
 .VolumeIcon.icns
 .AppleDB
 .AppleDesktop
-Network Trash Folder
-Temporary Items
 .apdisk
 
 # Various Linux ignoramuses.
