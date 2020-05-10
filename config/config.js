@@ -60,6 +60,7 @@ var config = {
     {
       module: 'MMM-Buttons',
       config: {
+        bounceTimeout: 0,
         buttons: [
           {
             pin: 17,
