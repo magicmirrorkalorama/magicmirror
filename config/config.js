@@ -28,7 +28,7 @@ var config = {
   language: 'en',
   timeFormat: 24,
   units: 'imperial',
-  serverOnly: true,
+  // serverOnly: true,
   // local for armv6l processors, default
   //   starts serveronly and then starts chrome browser
   // false, default for all  NON-armv6l devices
@@ -53,7 +53,7 @@ var config = {
       module: 'MMM-DailyPokemon',
       position: 'top_center',
       config: {
-        updateInterval: 10000,
+        updateInterval: 20000,
         grayscale: false, //Turns pokemon image and type images gray to match magic mirror styles
         minPoke: 1, //Default to all pokemon
         maxPoke: 649, //Highest number - 802 pokemon currently exist
@@ -71,30 +71,46 @@ var config = {
         buttons: [
           {
             pin: 17,
-            name: 'RED',
-            longPress: {
-              notification: 'SHOW_ALERT',
-              payload: { message: 'REDDDDDDDD' },
-              title: 'TEST',
-              message: 'RED BUTTON'
-            },
+            name: 'BUTTON_RED',
+            longPress: {},
             shortPress: {
               notification: 'SHOW_ALERT',
-              payload: { message: 'RED' }
+              payload: { message: 'BUTTON_RED' },
+              title: 'ALERT',
+              timer: 2000
             }
           },
           {
             pin: 23,
-            name: 'GREEN',
-            longPress: {
-              notification: 'SHOW_ALERT',
-              payload: { message: 'GREEEEEN' },
-              title: 'TEST',
-              message: 'GREEN BUTTON'
-            },
+            name: 'BUTTON_BLACK',
+            longPress: {},
             shortPress: {
               notification: 'SHOW_ALERT',
-              payload: { message: 'GREEN' }
+              payload: { message: 'BUTTON_BLACK' },
+              title: 'ALERT',
+              timer: 2000
+            }
+          },
+          {
+            pin: 27,
+            name: 'JOYSTICK_UP',
+            longPress: {},
+            shortPress: {
+              notification: 'SHOW_ALERT',
+              payload: { message: 'JOYSTICK_UP' },
+              title: 'ALERT',
+              timer: 2000
+            }
+          },
+          {
+            pin: 22,
+            name: 'JOYSTICK_DOWN',
+            longPress: {},
+            shortPress: {
+              notification: 'SHOW_ALERT',
+              payload: { message: 'JOYSTICK_DOWN' },
+              title: 'ALERT',
+              timer: 2000
             }
           }
         ]
