@@ -76,7 +76,7 @@ module.exports = NodeHelper.create({
       debounceTimeout: 10
     }
 
-    var pir = new Gpio(self.buttons[index].pin, 'in', 'none', options)
+    var pir = new Gpio(self.buttons[index].pin, 'in', 'both', options)
     pir.watch(this.watchHandler(index))
   },
 
