@@ -75,7 +75,7 @@ module.exports = NodeHelper.create({
       activeLow: !!self.buttons[index].activeLow
     }
 
-    var pir = new Gpio(self.buttons[index].pin, 'in', 'falling', options)
+    var pir = new Gpio(self.buttons[index].pin, 'in', 'none', options)
     pir.watch(this.watchHandler(index))
   },
 
