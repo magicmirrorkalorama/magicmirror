@@ -72,7 +72,8 @@ module.exports = NodeHelper.create({
 
     var options = {
       persistentWatch: true,
-      activeLow: !!self.buttons[index].activeLow
+      activeLow: !!self.buttons[index].activeLow,
+      debounceTimeout: 10
     }
 
     var pir = new Gpio(self.buttons[index].pin, 'in', 'none', options)
