@@ -48,6 +48,13 @@ var config = {
       config: {}
     },
     {
+      module: 'MMM-network-signal',
+      position: 'bottom_right',
+      config: {
+        showMessage: false
+      }
+    },
+    {
       module: 'MMM-DailyPokemon',
       position: 'top_left',
       config: {
