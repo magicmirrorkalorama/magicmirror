@@ -48,11 +48,9 @@ var config = {
       config: {}
     },
     {
-      module: 'MMM-network-signal',
-      position: 'bottom_right',
-      config: {
-        showMessage: false
-      }
+      module: 'MMM-Online-State',
+      position: 'top_right',
+      config: {}
     },
     {
       module: 'MMM-DailyPokemon',
