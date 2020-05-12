@@ -71,72 +71,103 @@ var config = {
       }
     },
     {
-      module: 'MMM-Buttons',
+      module: 'MMM-Pins',
       config: {
-        buttons: [
+        pinConfiguration: [
           {
             pin: 17,
-            name: 'BUTTON_RED',
-            longPress: undefined,
-            shortPress: {
-              notification: 'REMOTE_ACTION',
-              payload: {
-                action: 'SHOW_ALERT',
-                title: 'ALERT',
-                message: 'RED BUTTON',
-                timer: 1,
-                type: 'notification'
-              }
-            }
+            direction: 'in',
+            notification: 'SHOW_ALERT',
+            prettyName: 'BUTTON - RED'
           },
           {
             pin: 23,
-            name: 'BUTTON_BLACK',
-            longPress: undefined,
-            shortPress: {
-              notification: 'REMOTE_ACTION',
-              payload: {
-                action: 'SHOW_ALERT',
-                title: 'ALERT',
-                message: 'BLACK BUTTON',
-                timer: 1,
-                type: 'notification'
-              }
-            }
+            direction: 'in',
+            notification: 'SHOW_ALERT',
+            prettyName: 'BUTTON - BLACK'
           },
           {
             pin: 27,
-            name: 'JOYSTICK_UP',
-            longPress: undefined,
-            shortPress: {
-              notification: 'REMOTE_ACTION',
-              payload: {
-                action: 'SHOW_ALERT',
-                title: 'ALERT',
-                message: 'JOYSTICK UP',
-                timer: 1,
-                type: 'notification'
-              }
-            }
+            direction: 'in',
+            notification: 'SHOW_ALERT',
+            prettyName: 'JOYSTICK - UP'
           },
           {
             pin: 22,
-            name: 'JOYSTICK_DOWN',
-            longPress: undefined,
-            shortPress: {
-              notification: 'REMOTE_ACTION',
-              payload: {
-                action: 'SHOW_ALERT',
-                title: 'ALERT',
-                message: 'JOYSTICK DOWN',
-                timer: 1,
-                type: 'notification'
-              }
-            }
+            direction: 'in',
+            notification: 'SHOW_ALERT',
+            prettyName: 'JOYSTICK - DOWN'
           }
         ]
       }
     }
+    // {
+    //   module: 'MMM-Buttons',
+    //   config: {
+    //     buttons: [
+    //       {
+    //         pin: 17,
+    //         name: 'BUTTON_RED',
+    //         longPress: undefined,
+    //         shortPress: {
+    //           notification: 'REMOTE_ACTION',
+    //           payload: {
+    //             action: 'SHOW_ALERT',
+    //             title: 'ALERT',
+    //             message: 'RED BUTTON',
+    //             timer: 1,
+    //             type: 'notification'
+    //           }
+    //         }
+    //       },
+    //       {
+    //         pin: 23,
+    //         name: 'BUTTON_BLACK',
+    //         longPress: undefined,
+    //         shortPress: {
+    //           notification: 'REMOTE_ACTION',
+    //           payload: {
+    //             action: 'SHOW_ALERT',
+    //             title: 'ALERT',
+    //             message: 'BLACK BUTTON',
+    //             timer: 1,
+    //             type: 'notification'
+    //           }
+    //         }
+    //       },
+    //       {
+    //         pin: 27,
+    //         name: 'JOYSTICK_UP',
+    //         longPress: undefined,
+    //         shortPress: {
+    //           notification: 'REMOTE_ACTION',
+    //           payload: {
+    //             action: 'SHOW_ALERT',
+    //             title: 'ALERT',
+    //             message: 'JOYSTICK UP',
+    //             timer: 1,
+    //             type: 'notification'
+    //           }
+    //         }
+    //       },
+    //       {
+    //         pin: 22,
+    //         name: 'JOYSTICK_DOWN',
+    //         longPress: undefined,
+    //         shortPress: {
+    //           notification: 'REMOTE_ACTION',
+    //           payload: {
+    //             action: 'SHOW_ALERT',
+    //             title: 'ALERT',
+    //             message: 'JOYSTICK DOWN',
+    //             timer: 1,
+    //             type: 'notification'
+    //           }
+    //         }
+    //       }
+    //     ]
+    //   }
+    // },
     // {
     //   module: 'clock',
     //   position: 'top_left'
