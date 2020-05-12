@@ -42,6 +42,12 @@ var config = {
       module: 'MMM-Remote-Control'
     },
     {
+      module: 'MMM-connection-status',
+      header: 'connection',
+      position: 'top_right',
+      config: {}
+    },
+    {
       module: 'MMM-DailyPokemon',
       position: 'top_left',
       config: {
