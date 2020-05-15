@@ -101,6 +101,7 @@ var config = {
     },
     {
       module: 'joystick',
+      position: 'bottom_bar',
       config: {}
     }
     // {
