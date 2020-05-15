@@ -17,6 +17,9 @@ Module.register('joystick', {
   },
 
   socketNotificationReceived: function (notification, payload, sender) {
+    if (notification === 'PIN_CONFIG') {
+      Log.log('dude wtf... ok... so pin config...' + JSON.stringify(payload))
+    }
     Log.log(
       this.name +
         ' received a socket notification: ' +
