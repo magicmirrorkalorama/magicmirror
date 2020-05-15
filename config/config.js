@@ -75,26 +75,54 @@ var config = {
           {
             pin: 17,
             direction: 'in',
-            notification: 'SHOW_ALERT',
-            prettyName: 'BUTTON - RED'
+            notification: 'REMOTE_ACTION',
+            prettyName: 'BUTTON - RED',
+            payload: {
+              action: 'SHOW_ALERT',
+              title: 'ALERT',
+              message: 'RED BUTTON',
+              timer: 1,
+              type: 'notification'
+            }
           },
           {
             pin: 23,
             direction: 'in',
-            notification: 'SHOW_ALERT',
-            prettyName: 'BUTTON - BLACK'
+            notification: 'REMOTE_ACTION',
+            prettyName: 'BUTTON - BLACK',
+            payload: {
+              action: 'SHOW_ALERT',
+              title: 'ALERT',
+              message: 'BLACK BUTTON',
+              timer: 1,
+              type: 'notification'
+            }
           },
           {
             pin: 27,
             direction: 'in',
-            notification: 'SHOW_ALERT',
-            prettyName: 'JOYSTICK - UP'
+            notification: 'REMOTE_ACTION',
+            prettyName: 'JOYSTICK - UP',
+            payload: {
+              action: 'SHOW_ALERT',
+              title: 'ALERT',
+              message: 'JOYSTICK UP',
+              timer: 1,
+              type: 'notification'
+            }
           },
           {
             pin: 22,
             direction: 'in',
-            notification: 'SHOW_ALERT',
-            prettyName: 'JOYSTICK - DOWN'
+            notification: 'REMOTE_ACTION',
+            prettyName: 'JOYSTICK - DOWN',
+            payload: {
+              action: 'SHOW_ALERT',
+              title: 'ALERT',
+              message: 'JOYSTICK DOWN',
+              timer: 1,
+              type: 'notification'
+            }
           }
         ]
       }
