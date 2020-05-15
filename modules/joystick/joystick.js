@@ -15,7 +15,7 @@ Module.register('joystick', {
     this.scheduleUpdateInterval()
   },
 
-  notificationReceived: function (notification, payload, sender) {
+  socketNotificationReceived: function (notification, payload, sender) {
     Log.log(
       this.name +
         ' received a socket notification: ' +
