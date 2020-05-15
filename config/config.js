@@ -75,29 +75,33 @@ var config = {
           {
             pin: 17,
             direction: 'in',
-            notification: 'SHOW_ALERT',
-            prettyName: 'BUTTON - RED'
+            notification: 'BUTTON_PRESS',
+            prettyName: 'red'
           },
           {
             pin: 23,
             direction: 'in',
-            notification: 'SHOW_ALERT',
-            prettyName: 'BUTTON - BLACK'
+            notification: 'BUTTON_PRESS',
+            prettyName: 'black'
           },
           {
             pin: 27,
             direction: 'in',
-            notification: 'SHOW_ALERT',
-            prettyName: 'JOYSTICK - UP'
+            notification: 'JOYSTICK_POSITION',
+            prettyName: 'up'
           },
           {
             pin: 22,
             direction: 'in',
-            notification: 'SHOW_ALERT',
-            prettyName: 'JOYSTICK - DOWN'
+            notification: 'JOYSTICK_POSITION',
+            prettyName: 'down'
           }
         ]
       }
+    },
+    {
+      module: 'joystick',
+      config: {}
     }
     // {
     //   module: 'MMM-Buttons',
