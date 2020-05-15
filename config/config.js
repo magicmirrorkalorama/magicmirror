@@ -72,37 +72,37 @@ var config = {
         nameSize: 32
       }
     },
-    {
-      module: 'MMM-Pins',
-      config: {
-        pinConfiguration: [
-          // {
-          //   pin: 17,
-          //   direction: 'in',
-          //   notification: 'BUTTON_PRESS',
-          //   prettyName: 'red'
-          // },
-          // {
-          //   pin: 23,
-          //   direction: 'in',
-          //   notification: 'BUTTON_PRESS',
-          //   prettyName: 'black'
-          // },
-          {
-            pin: 27,
-            direction: 'in',
-            notification: 'JOYSTICK_POSITION',
-            prettyName: 'up'
-          },
-          {
-            pin: 22,
-            direction: 'in',
-            notification: 'JOYSTICK_POSITION',
-            prettyName: 'down'
-          }
-        ]
-      }
-    },
+    // {
+    //   module: 'MMM-Pins',
+    //   config: {
+    //     pinConfiguration: [
+    //       {
+    //         pin: 17,
+    //         direction: 'in',
+    //         notification: 'BUTTON_PRESS',
+    //         prettyName: 'red'
+    //       },
+    //       {
+    //         pin: 23,
+    //         direction: 'in',
+    //         notification: 'BUTTON_PRESS',
+    //         prettyName: 'black'
+    //       },
+    //       {
+    //         pin: 27,
+    //         direction: 'in',
+    //         notification: 'JOYSTICK_POSITION',
+    //         prettyName: 'up'
+    //       },
+    //       {
+    //         pin: 22,
+    //         direction: 'in',
+    //         notification: 'JOYSTICK_POSITION',
+    //         prettyName: 'down'
+    //       }
+    //     ]
+    //   }
+    // },
     {
       module: 'MMM-Buttons',
       config: {
