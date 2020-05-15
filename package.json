@@ -20,7 +20,12 @@
     "type": "git",
     "url": "git+https://github.com/MichMich/MagicMirror.git"
   },
-  "keywords": ["magic mirror", "smart mirror", "mirror UI", "modular"],
+  "keywords": [
+    "magic mirror",
+    "smart mirror",
+    "mirror UI",
+    "modular"
+  ],
   "author": "Michael Teeuw",
   "contributors": [
     "https://github.com/MichMich/MagicMirror/graphs/contributors"
@@ -67,6 +72,7 @@
     "module-alias": "^2.2.2",
     "moment": "latest",
     "pigpio": "^3.2.1",
+    "pm2": "^4.4.0",
     "request": "^2.88.0",
     "rrule": "^2.6.2",
     "rrule-alt": "^2.2.8",
