@@ -103,74 +103,70 @@ var config = {
       module: 'joystick',
       position: 'bottom_bar',
       config: {}
+    },
+    {
+      module: 'MMM-Buttons',
+      config: {
+        buttons: [
+          {
+            pin: 17,
+            name: 'BUTTON_RED',
+            longPress: undefined,
+            shortPress: {
+              notification: 'REMOTE_ACTION',
+              payload: {
+                action: 'SHOW_ALERT',
+                title: 'ALERT',
+                message: 'RED BUTTON',
+                timer: 1
+              }
+            }
+          },
+          {
+            pin: 23,
+            name: 'BUTTON_BLACK',
+            longPress: undefined,
+            shortPress: {
+              notification: 'REMOTE_ACTION',
+              payload: {
+                action: 'SHOW_ALERT',
+                title: 'ALERT',
+                message: 'BLACK BUTTON',
+                timer: 1
+              }
+            }
+          },
+          {
+            pin: 27,
+            name: 'JOYSTICK_UP',
+            longPress: undefined,
+            shortPress: {
+              notification: 'REMOTE_ACTION',
+              payload: {
+                action: 'SHOW_ALERT',
+                title: 'ALERT',
+                message: 'JOYSTICK UP',
+                timer: 1
+              }
+            }
+          },
+          {
+            pin: 22,
+            name: 'JOYSTICK_DOWN',
+            longPress: undefined,
+            shortPress: {
+              notification: 'REMOTE_ACTION',
+              payload: {
+                action: 'SHOW_ALERT',
+                title: 'ALERT',
+                message: 'JOYSTICK DOWN',
+                timer: 1
+              }
+            }
+          }
+        ]
+      }
     }
-    // {
-    //   module: 'MMM-Buttons',
-    //   config: {
-    //     buttons: [
-    //       {
-    //         pin: 17,
-    //         name: 'BUTTON_RED',
-    //         longPress: undefined,
-    //         shortPress: {
-    //           notification: 'REMOTE_ACTION',
-    //           payload: {
-    //             action: 'SHOW_ALERT',
-    //             title: 'ALERT',
-    //             message: 'RED BUTTON',
-    //             timer: 1,
-    //             type: 'notification'
-    //           }
-    //         }
-    //       },
-    //       {
-    //         pin: 23,
-    //         name: 'BUTTON_BLACK',
-    //         longPress: undefined,
-    //         shortPress: {
-    //           notification: 'REMOTE_ACTION',
-    //           payload: {
-    //             action: 'SHOW_ALERT',
-    //             title: 'ALERT',
-    //             message: 'BLACK BUTTON',
-    //             timer: 1,
-    //             type: 'notification'
-    //           }
-    //         }
-    //       },
-    //       {
-    //         pin: 27,
-    //         name: 'JOYSTICK_UP',
-    //         longPress: undefined,
-    //         shortPress: {
-    //           notification: 'REMOTE_ACTION',
-    //           payload: {
-    //             action: 'SHOW_ALERT',
-    //             title: 'ALERT',
-    //             message: 'JOYSTICK UP',
-    //             timer: 1,
-    //             type: 'notification'
-    //           }
-    //         }
-    //       },
-    //       {
-    //         pin: 22,
-    //         name: 'JOYSTICK_DOWN',
-    //         longPress: undefined,
-    //         shortPress: {
-    //           notification: 'REMOTE_ACTION',
-    //           payload: {
-    //             action: 'SHOW_ALERT',
-    //             title: 'ALERT',
-    //             message: 'JOYSTICK DOWN',
-    //             timer: 1,
-    //             type: 'notification'
-    //           }
-    //         }
-    //       }
-    //     ]
-    //   }
-    // },
     // {
     //   module: 'clock',
     //   position: 'top_left'
