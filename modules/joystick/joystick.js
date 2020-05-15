@@ -15,8 +15,14 @@ Module.register('joystick', {
     this.scheduleUpdateInterval()
   },
 
-  notificationReceived: function(notification, payload, sender) {
-    Log.log(this.name + " received a socket notification: " + notification + " - Payload: " + payload)
+  notificationReceived: function (notification, payload, sender) {
+    Log.log(
+      this.name +
+        ' received a socket notification: ' +
+        notification +
+        ' - Payload: ' +
+        payload
+    )
     if (notification === 'JOYSTICK_POSITION') {
       this.updatePosition(payload)
     }
@@ -46,7 +52,7 @@ Module.register('joystick', {
     Log.log('BUTTON STATUS CHANGED --', payload)
     this.config.button = payload
     this.updateDom()
-  }
+  },
 
   getDom: function () {
     const wrapper = document.createElement('div')
