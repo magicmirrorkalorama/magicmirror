@@ -26,7 +26,7 @@ var config = {
   httpsCertificate: '', // HTTPS Certificate path, only require when useHttps is true
 
   language: 'en',
-  timeFormat: 24,
+  timeFormat: 12,
   units: 'imperial',
   // serverOnly: true,
   // local for armv6l processors, default
@@ -61,10 +61,10 @@ var config = {
       position: 'top_left',
       config: {
         updateInterval: 30000,
-        grayscale: false, //Turns pokemon image and type images gray to match magic mirror styles
-        minPoke: 1, //Default to all pokemon
-        maxPoke: 649, //Highest number - 802 pokemon currently exist
-        showType: true, //Shows type icons below pokemon's image
+        grayscale: false,
+        minPoke: 1,
+        maxPoke: 649,
+        showType: true,
         stats: true,
         language: 'en',
         genera: true,
@@ -76,18 +76,18 @@ var config = {
       module: 'MMM-Pins',
       config: {
         pinConfiguration: [
-          {
-            pin: 17,
-            direction: 'in',
-            notification: 'BUTTON_PRESS',
-            prettyName: 'red'
-          },
-          {
-            pin: 23,
-            direction: 'in',
-            notification: 'BUTTON_PRESS',
-            prettyName: 'black'
-          },
+          // {
+          //   pin: 17,
+          //   direction: 'in',
+          //   notification: 'BUTTON_PRESS',
+          //   prettyName: 'red'
+          // },
+          // {
+          //   pin: 23,
+          //   direction: 'in',
+          //   notification: 'BUTTON_PRESS',
+          //   prettyName: 'black'
+          // },
           {
             pin: 27,
             direction: 'in',
@@ -103,122 +103,25 @@ var config = {
         ]
       }
     },
-
-    // {
-    //   module: 'MMM-Buttons',
-    //   config: {
-    //     buttons: [
-    //       {
-    //         pin: 17,
-    //         name: 'BUTTON_RED',
-    //         longPress: undefined,
-    //         shortPress: {
-    //           notification: 'REMOTE_ACTION',
-    //           payload: {
-    //             action: 'SHOW_ALERT',
-    //             title: 'ALERT',
-    //             message: 'RED BUTTON',
-    //             timer: 1
-    //           }
-    //         }
-    //       },
-    //       {
-    //         pin: 23,
-    //         name: 'BUTTON_BLACK',
-    //         longPress: undefined,
-    //         shortPress: {
-    //           notification: 'REMOTE_ACTION',
-    //           payload: {
-    //             action: 'SHOW_ALERT',
-    //             title: 'ALERT',
-    //             message: 'BLACK BUTTON',
-    //             timer: 1
-    //           }
-    //         }
-    //       },
-    //       {
-    //         pin: 27,
-    //         name: 'JOYSTICK_UP',
-    //         longPress: undefined,
-    //         shortPress: {
-    //           notification: 'REMOTE_ACTION',
-    //           payload: {
-    //             action: 'SHOW_ALERT',
-    //             title: 'ALERT',
-    //             message: 'JOYSTICK UP',
-    //             timer: 1
-    //           }
-    //         }
-    //       },
-    //       {
-    //         pin: 22,
-    //         name: 'JOYSTICK_DOWN',
-    //         longPress: undefined,
-    //         shortPress: {
-    //           notification: 'REMOTE_ACTION',
-    //           payload: {
-    //             action: 'SHOW_ALERT',
-    //             title: 'ALERT',
-    //             message: 'JOYSTICK DOWN',
-    //             timer: 1
-    //           }
-    //         }
-    //       }
-    //     ]
-    //   }
-    // },
-    // {
-    //   module: 'calendar',
-    //   header: 'US Holidays',
-    //   position: 'top_left',
-    //   config: {
-    //     calendars: [
-    //       {
-    //         symbol: 'calendar-check',
-    //         url: 'webcal://www.calendarlabs.com/ical-calendar/ics/76/US_Holidays.ics'
-    //       }
-    //     ]
-    //   }
-    // },
-    // {
-    //   module: 'compliments',
-    //   position: 'lower_third'
-    // },
-    // {
-    //   module: 'currentweather',
-    //   position: 'top_right',
-    //   config: {
-    //     location: 'New York',
-    //     locationID: '', //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-    //     appid: 'YOUR_OPENWEATHER_API_KEY'
-    //   }
-    // },
-    // {
-    //   module: 'weatherforecast',
-    //   position: 'top_right',
-    //   header: 'Weather Forecast',
-    //   config: {
-    //     location: 'New York',
-    //     locationID: '5128581', //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-    //     appid: 'YOUR_OPENWEATHER_API_KEY'
-    //   }
-    // },
-    // {
-    //   module: 'newsfeed',
-    //   position: 'bottom_bar',
-    //   config: {
-    //     feeds: [
-    //       {
-    //         title: 'New York Times',
-    //         url: 'http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml'
-    //       }
-    //     ],
-    //     showSourceTitle: true,
-    //     showPublishDate: true,
-    //     broadcastNewsFeeds: true,
-    //     broadcastNewsUpdates: true
-    //   }
-    // },
+    {
+      module: 'MMM-Buttons',
+      config: {
+        buttons: [
+          {
+            pin: 23,
+            name: 'monitor_control',
+            longPress: {
+              notification: 'REMOTE_ACTION',
+              payload: { action: 'MONITOROFF' }
+            },
+            shortPress: {
+              notification: 'REMOTE_ACTION',
+              payload: { action: 'MONITORON' }
+            }
+          }
+        ]
+      }
+    },
     {
       module: 'joystick',
       position: 'bottom_bar',
