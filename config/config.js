@@ -163,10 +163,10 @@ var config = {
         ]
       }
     },
-    // {
-    //   module: 'clock',
-    //   position: 'top_left'
-    // },
+    {
+      module: 'clock',
+      position: 'top_left'
+    },
     // {
     //   module: 'calendar',
     //   header: 'US Holidays',
