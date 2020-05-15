@@ -33,9 +33,7 @@ Module.register('joystick', {
 
   scheduleUpdateInterval: function () {
     this.updateDom()
-    this.timer = setInterval(() => {
-      this.updateDom()
-    }, this.config.updateInterval)
+    this.timer = setInterval(this.updateDom, this.config.updateInterval)
   },
 
   stop: function () {
