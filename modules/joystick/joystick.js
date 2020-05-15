@@ -7,7 +7,8 @@
 Module.register('joystick', {
   defaults: {
     position: 'neutral',
-    updateInterval: 5000
+    updateInterval: 300,
+    button: 'neutral'
   },
 
   start: function () {
@@ -43,13 +44,11 @@ Module.register('joystick', {
   updatePosition: function (payload) {
     Log.log('POSITION CHANGED --', payload)
     this.config.position = payload
-    this.updateDom()
   },
 
   updateButton: function (payload) {
     Log.log('BUTTON STATUS CHANGED --', payload)
     this.config.button = payload
-    this.updateDom()
   },
 
   getDom: function () {
