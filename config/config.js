@@ -56,68 +56,45 @@ var config = {
       position: 'top_right',
       config: {}
     },
-    {
-      module: 'MMM-DailyPokemon',
-      position: 'top_left',
-      config: {
-        updateInterval: 30000,
-        grayscale: false,
-        minPoke: 1,
-        maxPoke: 649,
-        showType: true,
-        stats: true,
-        language: 'en',
-        genera: true,
-        gbaMode: true,
-        nameSize: 32
-      }
-    },
     // {
-    //   module: 'MMM-Pins',
+    //   module: 'MMM-DailyPokemon',
+    //   position: 'top_left',
     //   config: {
-    //     pinConfiguration: [
-    //       {
-    //         pin: 17,
-    //         direction: 'in',
-    //         notification: 'BUTTON_PRESS',
-    //         prettyName: 'red'
-    //       },
-    //       {
-    //         pin: 23,
-    //         direction: 'in',
-    //         notification: 'BUTTON_PRESS',
-    //         prettyName: 'black'
-    //       },
-    //       {
-    //         pin: 27,
-    //         direction: 'in',
-    //         notification: 'JOYSTICK_POSITION',
-    //         prettyName: 'up'
-    //       },
-    //       {
-    //         pin: 22,
-    //         direction: 'in',
-    //         notification: 'JOYSTICK_POSITION',
-    //         prettyName: 'down'
-    //       }
-    //     ]
+    //     updateInterval: 30000,
+    //     grayscale: false,
+    //     minPoke: 1,
+    //     maxPoke: 649,
+    //     showType: true,
+    //     stats: true,
+    //     language: 'en',
+    //     genera: true,
+    //     gbaMode: true,
+    //     nameSize: 32
     //   }
     // },
     {
-      module: 'MMM-Buttons',
+      module: 'MMM-Pins',
       config: {
-        buttons: [
+        pinConfiguration: [
+          {
+            pin: 17,
+            direction: 'in',
+            notification: 'MONITORON'
+          },
           {
             pin: 23,
-            name: 'monitor_control',
-            longPress: {
-              notification: 'REMOTE_ACTION',
-              payload: { action: 'MONITOROFF' }
-            },
-            shortPress: {
-              notification: 'REMOTE_ACTION',
-              payload: { action: 'MONITORON' }
-            }
+            direction: 'in',
+            notification: 'MONITOROFF'
+          },
+          {
+            pin: 27,
+            direction: 'in',
+            notification: 'JOYSTICK_POSITION'
+          },
+          {
+            pin: 22,
+            direction: 'in',
+            notification: 'JOYSTICK_POSITION'
           }
         ]
       }
