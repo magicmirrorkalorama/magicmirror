@@ -42,11 +42,6 @@ var config = {
       module: 'MMM-Remote-Control'
     },
     {
-      module: 'joystick',
-      position: 'bottom_bar',
-      config: {}
-    },
-    {
       module: 'MMM-connection-status',
       header: 'connection',
       position: 'top_right',
@@ -167,7 +162,7 @@ var config = {
           }
         ]
       }
-    }
+    },
     // {
     //   module: 'clock',
     //   position: 'top_left'
@@ -223,7 +218,12 @@ var config = {
     //     broadcastNewsFeeds: true,
     //     broadcastNewsUpdates: true
     //   }
-    // }
+    // },
+    {
+      module: 'joystick',
+      position: 'bottom_bar',
+      config: {}
+    }
   ]
 }
 
