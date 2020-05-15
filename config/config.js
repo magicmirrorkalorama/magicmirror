@@ -42,6 +42,10 @@ var config = {
       module: 'MMM-Remote-Control'
     },
     {
+      module: 'clock',
+      position: 'top_right'
+    },
+    {
       module: 'MMM-connection-status',
       header: 'connection',
       position: 'top_right',
@@ -100,73 +104,69 @@ var config = {
       }
     },
 
-    {
-      module: 'MMM-Buttons',
-      config: {
-        buttons: [
-          {
-            pin: 17,
-            name: 'BUTTON_RED',
-            longPress: undefined,
-            shortPress: {
-              notification: 'REMOTE_ACTION',
-              payload: {
-                action: 'SHOW_ALERT',
-                title: 'ALERT',
-                message: 'RED BUTTON',
-                timer: 1
-              }
-            }
-          },
-          {
-            pin: 23,
-            name: 'BUTTON_BLACK',
-            longPress: undefined,
-            shortPress: {
-              notification: 'REMOTE_ACTION',
-              payload: {
-                action: 'SHOW_ALERT',
-                title: 'ALERT',
-                message: 'BLACK BUTTON',
-                timer: 1
-              }
-            }
-          },
-          {
-            pin: 27,
-            name: 'JOYSTICK_UP',
-            longPress: undefined,
-            shortPress: {
-              notification: 'REMOTE_ACTION',
-              payload: {
-                action: 'SHOW_ALERT',
-                title: 'ALERT',
-                message: 'JOYSTICK UP',
-                timer: 1
-              }
-            }
-          },
-          {
-            pin: 22,
-            name: 'JOYSTICK_DOWN',
-            longPress: undefined,
-            shortPress: {
-              notification: 'REMOTE_ACTION',
-              payload: {
-                action: 'SHOW_ALERT',
-                title: 'ALERT',
-                message: 'JOYSTICK DOWN',
-                timer: 1
-              }
-            }
-          }
-        ]
-      }
-    },
-    {
-      module: 'clock',
-      position: 'top_left'
-    },
+    // {
+    //   module: 'MMM-Buttons',
+    //   config: {
+    //     buttons: [
+    //       {
+    //         pin: 17,
+    //         name: 'BUTTON_RED',
+    //         longPress: undefined,
+    //         shortPress: {
+    //           notification: 'REMOTE_ACTION',
+    //           payload: {
+    //             action: 'SHOW_ALERT',
+    //             title: 'ALERT',
+    //             message: 'RED BUTTON',
+    //             timer: 1
+    //           }
+    //         }
+    //       },
+    //       {
+    //         pin: 23,
+    //         name: 'BUTTON_BLACK',
+    //         longPress: undefined,
+    //         shortPress: {
+    //           notification: 'REMOTE_ACTION',
+    //           payload: {
+    //             action: 'SHOW_ALERT',
+    //             title: 'ALERT',
+    //             message: 'BLACK BUTTON',
+    //             timer: 1
+    //           }
+    //         }
+    //       },
+    //       {
+    //         pin: 27,
+    //         name: 'JOYSTICK_UP',
+    //         longPress: undefined,
+    //         shortPress: {
+    //           notification: 'REMOTE_ACTION',
+    //           payload: {
+    //             action: 'SHOW_ALERT',
+    //             title: 'ALERT',
+    //             message: 'JOYSTICK UP',
+    //             timer: 1
+    //           }
+    //         }
+    //       },
+    //       {
+    //         pin: 22,
+    //         name: 'JOYSTICK_DOWN',
+    //         longPress: undefined,
+    //         shortPress: {
+    //           notification: 'REMOTE_ACTION',
+    //           payload: {
+    //             action: 'SHOW_ALERT',
+    //             title: 'ALERT',
+    //             message: 'JOYSTICK DOWN',
+    //             timer: 1
+    //           }
+    //         }
+    //       }
+    //     ]
+    //   }
+    // },
     // {
     //   module: 'calendar',
     //   header: 'US Holidays',
