@@ -29,11 +29,13 @@ Module.register('joystick', {
     }
 
     if (notification === 'JOYSTICK_POSITION') {
-      this.updatePosition(payload)
+      Log.log('JOYSTICK_POSITION...', payload)
+      // this.updatePosition(payload)
     }
 
     if (notification === 'BUTTON_PRESS') {
-      this.updateButton(payload)
+      Log.log('BUTTON PRESS...', payload)
+      // this.updateButton(payload)
     }
   },
 
