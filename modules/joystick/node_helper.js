@@ -1,4 +1,6 @@
 const NodeHelper = require('node_helper')
+const raspi = require('raspi')
+const gpio = require('raspi-gpio')
 
 /* Magic Mirror
  * Module: joystick
@@ -6,6 +8,14 @@ const NodeHelper = require('node_helper')
 module.exports = NodeHelper.create({
   start: function () {
     console.log('Starting node helper for: ' + this.name)
+    raspi.init(() => {
+      const input = new gpio.DigitalInput({
+        pin: 'GPIO17',
+        pullResistor: gpio.PULL_UP
+      })
+
+      console.log(input.read())
+    })
   },
 
   socketNotificationReceived: function (notification, payload) {

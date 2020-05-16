@@ -49,15 +49,7 @@ var config = {
       config: {}
     },
     {
-      module: 'MMM-Remote-Control',
-      config: {
-        customCommand: {
-          monitorOnCommand: 'vcgencmd display_power 1',
-          monitorOffCommand: 'vcgencmd display_power 0',
-          monitorStatusCommand:
-            'vcgencmd display_power | grep -q "1" && echo "true" || echo "false" '
-        }
-      }
+      module: 'MMM-Remote-Control'
     },
     {
       module: 'MMM-connection-status',
@@ -85,36 +77,36 @@ var config = {
         gbaMode: false,
         nameSize: 32
       }
-    },
-    {
-      module: 'MMM-Pins',
-      config: {
-        pinConfiguration: [
-          {
-            pin: 17,
-            direction: 'in',
-            notification: 'MONITORON'
-          },
-          {
-            pin: 23,
-            direction: 'in',
-            notification: 'MONITOROFF'
-          },
-          {
-            pin: 27,
-            direction: 'in',
-            notification: 'SHOW_ALERT',
-            prettyName: 'JOYSTICK_UP'
-          },
-          {
-            pin: 22,
-            direction: 'in',
-            notification: 'SHOW_ALERT',
-            prettyName: 'JOYSTICK_DOWN'
-          }
-        ]
-      }
     }
+    // {
+    //   module: 'MMM-Pins',
+    //   config: {
+    //     pinConfiguration: [
+    //       {
+    //         pin: 17,
+    //         direction: 'in',
+    //         notification: 'MONITORON'
+    //       },
+    //       {
+    //         pin: 23,
+    //         direction: 'in',
+    //         notification: 'MONITOROFF'
+    //       },
+    //       {
+    //         pin: 27,
+    //         direction: 'in',
+    //         notification: 'SHOW_ALERT',
+    //         prettyName: 'JOYSTICK_UP'
+    //       },
+    //       {
+    //         pin: 22,
+    //         direction: 'in',
+    //         notification: 'SHOW_ALERT',
+    //         prettyName: 'JOYSTICK_DOWN'
+    //       }
+    //     ]
+    //   }
+    // }
   ]
 }
 
