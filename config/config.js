@@ -44,7 +44,15 @@ var config = {
       position: 'top_right'
     },
     {
-      module: 'MMM-Remote-Control'
+      module: 'MMM-Remote-Control',
+      config: {
+        customCommand: {
+          monitorOnCommand: 'vcgencmd display_power 1',
+          monitorOffCommand: 'vcgencmd display_power 0',
+          monitorStatusCommand:
+            'vcgencmd display_power | grep -q "1" && echo "true" || echo "false" '
+        }
+      }
     },
     {
       module: 'joystick',

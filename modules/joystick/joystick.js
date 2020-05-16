@@ -16,35 +16,51 @@ Module.register('joystick', {
     this.scheduleUpdateInterval()
   },
 
-  socketNotificationReceived: function (notification, payload, sender) {
-    if (notification === 'ALL_MODULES_STARTED') {
-      Log.info(
+  notificationReceived: function (notification, payload, sender) {
+    if (sender) {
+      Log.log(
         this.name +
-          ' received a socket notification: ' +
+          ' received a module notification: ' +
           notification +
-          ' - Payload: ' +
-          payload
+          ' from sender: ' +
+          sender.name
       )
-
-      // if (notification === 'PIN_CONFIG') {
-      //   Log.info('PIN_CONFIG' + JSON.stringify(payload))
-      // }
-
-      // if (notification === 'TOGGLE_PIN') {
-      //   Log.info('TOGGLE_PIN' + JSON.stringify(payload))
-      // }
-
-      // if (notification === 'JOYSTICK_POSITION') {
-      //   Log.info('JOYSTICK_POSITION' + JSON.stringify(payload))
-      //   // this.updatePosition(payload)
-      // }
-
-      // if (notification === 'BUTTON_PRESS') {
-      //   Log.info('BUTTON_PRESS' + JSON.stringify(payload))
-      //   // this.updateButton(payload)
-      // }
+    } else {
+      Log.log(this.name + ' received a system notification: ' + notification)
     }
   },
+
+  socketNotificationReceived: function (notification, payload) {
+    Log.log(
+      this.name +
+        ' received a socket notification: ' +
+        notification +
+        ' - Payload: ' +
+        payload
+    )
+  },
+
+  // socketNotificationReceived: function (notification, payload, sender) {
+  //   if (notification === 'ALL_MODULES_STARTED') {
+  //     if (notification === 'PIN_CONFIG') {
+  //       Log.info('PIN_CONFIG' + JSON.stringify(payload))
+  //     }
+
+  //     if (notification === 'TOGGLE_PIN') {
+  //       Log.info('TOGGLE_PIN' + JSON.stringify(payload))
+  //     }
+
+  //     if (notification === 'JOYSTICK_POSITION') {
+  //       Log.info('JOYSTICK_POSITION' + JSON.stringify(payload))
+  //       // this.updatePosition(payload)
+  //     }
+
+  //     if (notification === 'BUTTON_PRESS') {
+  //       Log.info('BUTTON_PRESS' + JSON.stringify(payload))
+  //       // this.updateButton(payload)
+  //     }
+  //   }
+  // },
 
   scheduleUpdateInterval: function () {
     this.updateDom()
