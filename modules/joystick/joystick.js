@@ -17,35 +17,37 @@ Module.register('joystick', {
   },
 
   socketNotificationReceived: function (notification, payload, sender) {
-    Log.log(
-      this.name +
-        ' received a socket notification: ' +
-        notification +
-        ' - Payload: ' +
-        payload
-    )
-    if (notification === 'PIN_CONFIG') {
-      Log.log('dude wtf... ok... so pin config...' + JSON.stringify(payload))
-    }
+    if (notification === 'ALL_MODULES_STARTED') {
+      Log.log(
+        this.name +
+          ' received a socket notification: ' +
+          notification +
+          ' - Payload: ' +
+          payload
+      )
+      if (notification === 'PIN_CONFIG') {
+        Log.log('PIN_CONFIG' + JSON.stringify(payload))
+      }
 
-    if (notification === 'JOYSTICK_POSITION') {
-      Log.log('JOYSTICK_POSITION...', payload)
-      // this.updatePosition(payload)
-    }
+      if (notification === 'TOGGLE_PIN') {
+        Log.log('TOGGLE_PIN' + JSON.stringify(payload))
+      }
 
-    if (notification === 'BUTTON_PRESS') {
-      Log.log('BUTTON PRESS...', payload)
-      // this.updateButton(payload)
+      if (notification === 'JOYSTICK_POSITION') {
+        Log.log('JOYSTICK_POSITION' + JSON.stringify(payload))
+        // this.updatePosition(payload)
+      }
+
+      if (notification === 'BUTTON_PRESS') {
+        Log.log('BUTTON_PRESS' + JSON.stringify(payload))
+        // this.updateButton(payload)
+      }
     }
   },
 
   scheduleUpdateInterval: function () {
     this.updateDom()
     this.timer = setInterval(() => this.updateDom(), this.config.updateInterval)
-  },
-
-  stop: function () {
-    clearInterval(this.timer)
   },
 
   updatePosition: function (payload) {
@@ -60,7 +62,7 @@ Module.register('joystick', {
 
   getDom: function () {
     const wrapper = document.createElement('div')
-    wrapper.innerHTML = JSON.stringify(this.config) + new Date()
+    wrapper.innerHTML = JSON.stringify(this.config)
     return wrapper
   }
 })
