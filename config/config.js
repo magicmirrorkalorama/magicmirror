@@ -89,12 +89,22 @@ var config = {
           {
             pin: 27,
             direction: 'in',
-            notification: 'JOYSTICK_POSITION'
+            notification: 'SHOW_ALERT',
+            payload: {
+              type: 'notification',
+              message: 'UP',
+              timer: 1
+            }
           },
           {
             pin: 22,
             direction: 'in',
-            notification: 'JOYSTICK_POSITION'
+            notification: 'SHOW_ALERT',
+            payload: {
+              type: 'notification',
+              message: 'DOWN',
+              timer: 1
+            }
           }
         ]
       }
