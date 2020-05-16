@@ -17,9 +17,6 @@ Module.register('joystick', {
   },
 
   socketNotificationReceived: function (notification, payload, sender) {
-    if (notification === 'PIN_CONFIG') {
-      Log.log('dude wtf... ok... so pin config...' + JSON.stringify(payload))
-    }
     Log.log(
       this.name +
         ' received a socket notification: ' +
@@ -27,6 +24,10 @@ Module.register('joystick', {
         ' - Payload: ' +
         payload
     )
+    if (notification === 'PIN_CONFIG') {
+      Log.log('dude wtf... ok... so pin config...' + JSON.stringify(payload))
+    }
+
     if (notification === 'JOYSTICK_POSITION') {
       this.updatePosition(payload)
     }
@@ -56,7 +57,7 @@ Module.register('joystick', {
 
   getDom: function () {
     const wrapper = document.createElement('div')
-    wrapper.innerHTML = JSON.stringify(this.config)
+    wrapper.innerHTML = JSON.stringify(this.config) + new Date()
     return wrapper
   }
 })
