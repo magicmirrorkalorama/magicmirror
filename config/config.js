@@ -91,23 +91,23 @@ var config = {
       config: {
         pinConfiguration: [
           {
-            pin: 17,
+            pin: 11, //17,
             direction: 'in',
             notification: 'MONITORON'
           },
           {
-            pin: 23,
+            pin: 16, // 23,
             direction: 'in',
             notification: 'MONITOROFF'
           },
           {
-            pin: 27,
+            pin: 13 // 27,
             direction: 'in',
             notification: 'SHOW_ALERT',
             prettyName: 'JOYSTICK_UP'
           },
           {
-            pin: 22,
+            pin: 15 // 22,
             direction: 'in',
             notification: 'SHOW_ALERT',
             prettyName: 'JOYSTICK_DOWN'
