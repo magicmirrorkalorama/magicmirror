@@ -44,6 +44,11 @@ var config = {
       position: 'top_right'
     },
     {
+      module: 'joystick',
+      position: 'bottom_bar',
+      config: {}
+    },
+    {
       module: 'MMM-Remote-Control',
       config: {
         customCommand: {
@@ -53,11 +58,6 @@ var config = {
             'vcgencmd display_power | grep -q "1" && echo "true" || echo "false" '
         }
       }
-    },
-    {
-      module: 'joystick',
-      position: 'bottom_bar',
-      config: {}
     },
     {
       module: 'MMM-connection-status',
@@ -70,22 +70,22 @@ var config = {
       position: 'top_right',
       config: {}
     },
-    // {
-    //   module: 'MMM-DailyPokemon',
-    //   position: 'top_left',
-    //   config: {
-    //     updateInterval: 30000,
-    //     grayscale: false,
-    //     minPoke: 1,
-    //     maxPoke: 649,
-    //     showType: true,
-    //     stats: true,
-    //     language: 'en',
-    //     genera: true,
-    //     gbaMode: true,
-    //     nameSize: 32
-    //   }
-    // },
+    {
+      module: 'MMM-DailyPokemon',
+      position: 'top_left',
+      config: {
+        updateInterval: 30000,
+        grayscale: false,
+        minPoke: 1,
+        maxPoke: 649,
+        showType: true,
+        stats: true,
+        language: 'en',
+        genera: true,
+        gbaMode: false,
+        nameSize: 32
+      }
+    },
     {
       module: 'MMM-Pins',
       config: {

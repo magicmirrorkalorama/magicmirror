@@ -24,8 +24,7 @@ module.exports = NodeHelper.create({
           let pinConfig = pinConfigs[index]
           self.gpio[String(pinConfig.pin)] = new Gpio(
             pinConfig.pin,
-            pinConfig.direction,
-            'both'
+            pinConfig.direction
           )
         }
       }
