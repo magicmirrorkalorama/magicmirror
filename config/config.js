@@ -38,9 +38,7 @@ var config = {
     {
       module: 'alert'
     },
-    {
-      module: 'MMM-Remote-Control'
-    },
+
     {
       module: 'clock',
       position: 'top_right'
@@ -90,24 +88,19 @@ var config = {
             pin: 27,
             direction: 'in',
             notification: 'SHOW_ALERT',
-            payload: {
-              type: 'notification',
-              message: 'UP',
-              timer: 1
-            }
+            prettyName: 'JOYSTICK_UP'
           },
           {
             pin: 22,
             direction: 'in',
             notification: 'SHOW_ALERT',
-            payload: {
-              type: 'notification',
-              message: 'DOWN',
-              timer: 1
-            }
+            prettyName: 'JOYSTICK_DOWN'
           }
         ]
       }
+    },
+    {
+      module: 'MMM-Remote-Control'
     },
     {
       module: 'joystick',
