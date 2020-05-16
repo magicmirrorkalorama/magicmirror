@@ -12,36 +12,37 @@ Module.register('joystick', {
   },
 
   start: function () {
-    Log.log('Starting module: ' + this.name)
+    Log.debug('Starting module: ' + this.name)
     this.scheduleUpdateInterval()
   },
 
   socketNotificationReceived: function (notification, payload, sender) {
     if (notification === 'ALL_MODULES_STARTED') {
-      Log.log(
+      Log.debug(
         this.name +
           ' received a socket notification: ' +
           notification +
           ' - Payload: ' +
           payload
       )
-      if (notification === 'PIN_CONFIG') {
-        Log.log('PIN_CONFIG' + JSON.stringify(payload))
-      }
 
-      if (notification === 'TOGGLE_PIN') {
-        Log.log('TOGGLE_PIN' + JSON.stringify(payload))
-      }
+      // if (notification === 'PIN_CONFIG') {
+      //   Log.debug('PIN_CONFIG' + JSON.stringify(payload))
+      // }
 
-      if (notification === 'JOYSTICK_POSITION') {
-        Log.log('JOYSTICK_POSITION' + JSON.stringify(payload))
-        // this.updatePosition(payload)
-      }
+      // if (notification === 'TOGGLE_PIN') {
+      //   Log.debug('TOGGLE_PIN' + JSON.stringify(payload))
+      // }
 
-      if (notification === 'BUTTON_PRESS') {
-        Log.log('BUTTON_PRESS' + JSON.stringify(payload))
-        // this.updateButton(payload)
-      }
+      // if (notification === 'JOYSTICK_POSITION') {
+      //   Log.debug('JOYSTICK_POSITION' + JSON.stringify(payload))
+      //   // this.updatePosition(payload)
+      // }
+
+      // if (notification === 'BUTTON_PRESS') {
+      //   Log.debug('BUTTON_PRESS' + JSON.stringify(payload))
+      //   // this.updateButton(payload)
+      // }
     }
   },
 
@@ -51,12 +52,12 @@ Module.register('joystick', {
   },
 
   updatePosition: function (payload) {
-    Log.log('POSITION CHANGED --', payload)
+    Log.debug('POSITION CHANGED --', payload)
     this.config.position = payload
   },
 
   updateButton: function (payload) {
-    Log.log('BUTTON STATUS CHANGED --', payload)
+    Log.debug('BUTTON STATUS CHANGED --', payload)
     this.config.button = payload
   },
 
