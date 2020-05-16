@@ -6,9 +6,11 @@ module.exports = NodeHelper.create({
   },
 
   socketNotificationReceived: function (notification, payload) {
-    console.log('NOTIFICATION OF ANY KIND....', notification, payload)
     if (notification === 'PIN_CONFIG') {
-      console.log('PIN_CONFIG', notification, payload)
+      self.sendSocketNotification('PIN_CONFIG', payload)
+    }
+    if (notification === 'TOGGLE_PIN') {
+      self.sendSocketNotification('TOGGLE_PIN', payload)
     }
   }
 })

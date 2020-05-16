@@ -31,6 +31,7 @@ Module.register('joystick', {
     if (notification === 'JOYSTICK_POSITION') {
       this.updatePosition(payload)
     }
+
     if (notification === 'BUTTON_PRESS') {
       this.updateButton(payload)
     }
