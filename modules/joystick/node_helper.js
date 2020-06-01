@@ -9,7 +9,7 @@ module.exports = NodeHelper.create({
   },
 
   socketNotificationReceived: function (notification, payload) {
-    Log.log(
+    console.log(
       this.name +
         ' received a socket notification: ' +
         notification +
