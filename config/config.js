@@ -44,11 +44,6 @@ var config = {
       position: 'top_right'
     },
     {
-      module: 'joystick',
-      position: 'bottom_bar',
-      config: {}
-    },
-    {
       module: 'MMM-Remote-Control'
     },
     {
@@ -77,36 +72,41 @@ var config = {
         gbaMode: false,
         nameSize: 32
       }
+    },
+    {
+      module: 'MMM-Pins',
+      config: {
+        pinConfiguration: [
+          {
+            pin: 17,
+            direction: 'in',
+            notification: 'MONITORON'
+          },
+          {
+            pin: 23,
+            direction: 'in',
+            notification: 'MONITOROFF'
+          },
+          {
+            pin: 27,
+            direction: 'in',
+            notification: 'SHOW_ALERT',
+            prettyName: 'JOYSTICK_UP'
+          },
+          {
+            pin: 22,
+            direction: 'in',
+            notification: 'SHOW_ALERT',
+            prettyName: 'JOYSTICK_DOWN'
+          }
+        ]
+      }
+    },
+    {
+      module: 'joystick',
+      position: 'bottom_bar',
+      config: {}
     }
-    // {
-    //   module: 'MMM-Pins',
-    //   config: {
-    //     pinConfiguration: [
-    //       {
-    //         pin: 17,
-    //         direction: 'in',
-    //         notification: 'MONITORON'
-    //       },
-    //       {
-    //         pin: 23,
-    //         direction: 'in',
-    //         notification: 'MONITOROFF'
-    //       },
-    //       {
-    //         pin: 27,
-    //         direction: 'in',
-    //         notification: 'SHOW_ALERT',
-    //         prettyName: 'JOYSTICK_UP'
-    //       },
-    //       {
-    //         pin: 22,
-    //         direction: 'in',
-    //         notification: 'SHOW_ALERT',
-    //         prettyName: 'JOYSTICK_DOWN'
-    //       }
-    //     ]
-    //   }
-    // }
   ]
 }
 
