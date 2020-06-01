@@ -13,7 +13,7 @@ Module.register('joystick', {
 
   start: function () {
     Log.info('Starting module: ' + this.name)
-    this.scheduleUpdateInterval()
+    // this.scheduleUpdateInterval()
   },
 
   notificationReceived: function (notification, payload, sender) {
