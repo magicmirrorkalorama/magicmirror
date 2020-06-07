@@ -69,7 +69,7 @@ var config = {
         stats: true,
         language: 'en',
         genera: true,
-        gbaMode: false,
+        gbaMode: true,
         nameSize: 32
       }
     },
