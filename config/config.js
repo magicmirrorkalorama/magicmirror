@@ -45,10 +45,9 @@ var config = {
     {
       module: 'MMM-GPIO-Notifications',
       config: {
-        '17': {
-          gpio_state: 1,
-          gpio_debounce: 20,
-          // delay: 1000,
+        '11': {
+          gpio_state: 0,
+          gpio_debounce: 10,
           notifications: [
             {
               notification: 'SHOW_ALERT',
@@ -60,9 +59,9 @@ var config = {
             }
           ]
         },
-        '23': {
-          gpio_state: 1,
-          gpio_debounce: 20,
+        '16': {
+          gpio_state: 0,
+          gpio_debounce: 10,
           notifications: [
             {
               notification: 'SHOW_ALERT',
