@@ -44,20 +44,6 @@ var config = {
       position: 'top_right'
     },
     {
-      module: 'MMM-Remote-Control'
-    },
-    {
-      module: 'MMM-connection-status',
-      header: 'connection',
-      position: 'top_right',
-      config: {}
-    },
-    {
-      module: 'MMM-Online-State',
-      position: 'top_right',
-      config: {}
-    },
-    {
       module: 'MMM-DailyPokemon',
       position: 'top_left',
       config: {
@@ -74,39 +60,73 @@ var config = {
       }
     },
     {
-      module: 'MMM-Pins',
+      module: 'MMM-GPIO-Notifications',
       config: {
-        pinConfiguration: [
-          {
-            pin: 17,
-            direction: 'in',
-            notification: 'MONITORON'
-          },
-          {
-            pin: 23,
-            direction: 'in',
-            notification: 'MONITOROFF'
-          },
-          {
-            pin: 27,
-            direction: 'in',
-            notification: 'SHOW_ALERT',
-            prettyName: 'JOYSTICK_UP'
-          },
-          {
-            pin: 22,
-            direction: 'in',
-            notification: 'SHOW_ALERT',
-            prettyName: 'JOYSTICK_DOWN'
-          }
-        ]
+        '17': {
+          gpio_state: 0,
+          gpio_debounce: 10,
+          notifications: [
+            {
+              notification: 'SHOW_ALERT',
+              payload: {
+                type: 'notification',
+                title: 'button press',
+                message: 'pressed gpio 17'
+              }
+            }
+          ]
+        },
+        '23': {
+          gpio_state: 0,
+          gpio_debounce: 10,
+          notifications: [
+            {
+              notification: 'SHOW_ALERT',
+              payload: {
+                type: 'notification',
+                title: 'button press',
+                message: 'pressed gpio 23'
+              }
+            }
+          ]
+        }
       }
-    },
-    {
-      module: 'joystick',
-      position: 'bottom_bar',
-      config: {}
     }
+
+    // {
+    //   module: 'MMM-Pins',
+    //   config: {
+    //     pinConfiguration: [
+    //       {
+    //         pin: 17,
+    //         direction: 'in',
+    //         notification: 'MONITORON'
+    //       },
+    //       {
+    //         pin: 23,
+    //         direction: 'in',
+    //         notification: 'MONITOROFF'
+    //       },
+    //       {
+    //         pin: 27,
+    //         direction: 'in',
+    //         notification: 'SHOW_ALERT',
+    //         prettyName: 'JOYSTICK_UP'
+    //       },
+    //       {
+    //         pin: 22,
+    //         direction: 'in',
+    //         notification: 'SHOW_ALERT',
+    //         prettyName: 'JOYSTICK_DOWN'
+    //       }
+    //     ]
+    //   }
+    // },
+    // {
+    //   module: 'joystick',
+    //   position: 'bottom_bar',
+    //   config: {}
+    // }
   ]
 }
 
