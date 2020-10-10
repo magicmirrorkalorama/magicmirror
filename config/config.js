@@ -21,7 +21,7 @@ var config = {
   // or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
   // ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.3.0/28"],
 
-  // useHttps: false, // Support HTTPS or not, default "false" will use HTTP
+  useHttps: false, // Support HTTPS or not, default "false" will use HTTP
   // httpsPrivateKey: '', // HTTPS private key path, only require when useHttps is true
   // httpsCertificate: '', // HTTPS Certificate path, only require when useHttps is true
 
@@ -45,7 +45,7 @@ var config = {
     {
       module: 'MMM-GPIO-Notifications',
       config: {
-        '17': {
+        '0': {
           gpio_state: 0,
           gpio_debounce: 10,
           notifications: [
@@ -59,7 +59,7 @@ var config = {
             }
           ]
         },
-        '23': {
+        '4': {
           gpio_state: 0,
           gpio_debounce: 10,
           notifications: [
