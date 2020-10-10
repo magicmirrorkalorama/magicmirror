@@ -38,10 +38,43 @@ var config = {
     {
       module: 'alert'
     },
-
     {
       module: 'clock',
       position: 'top_right'
+    },
+    {
+      module: 'MMM-GPIO-Notifications',
+      config: {
+        '17': {
+          gpio_state: 1,
+          gpio_debounce: 20,
+          // delay: 1000,
+          notifications: [
+            {
+              notification: 'SHOW_ALERT',
+              payload: {
+                type: 'notification',
+                title: 'button press',
+                message: 'pressed gpio 17'
+              }
+            }
+          ]
+        },
+        '23': {
+          gpio_state: 1,
+          gpio_debounce: 20,
+          notifications: [
+            {
+              notification: 'SHOW_ALERT',
+              payload: {
+                type: 'notification',
+                title: 'button press',
+                message: 'pressed gpio 23'
+              }
+            }
+          ]
+        }
+      }
     }
     // {
     //   module: 'MMM-Remote-Control'
