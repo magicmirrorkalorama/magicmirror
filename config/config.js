@@ -45,7 +45,7 @@ var config = {
     {
       module: 'MMM-GPIO-Notifications',
       config: {
-        '11': {
+        '17': {
           gpio_state: 0,
           gpio_debounce: 10,
           notifications: [
@@ -59,7 +59,7 @@ var config = {
             }
           ]
         },
-        '16': {
+        '23': {
           gpio_state: 0,
           gpio_debounce: 10,
           notifications: [
