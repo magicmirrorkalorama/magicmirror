@@ -21,9 +21,9 @@ var config = {
   // or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
   // ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.3.0/28"],
 
-  useHttps: false, // Support HTTPS or not, default "false" will use HTTP
-  httpsPrivateKey: '', // HTTPS private key path, only require when useHttps is true
-  httpsCertificate: '', // HTTPS Certificate path, only require when useHttps is true
+  // useHttps: false, // Support HTTPS or not, default "false" will use HTTP
+  // httpsPrivateKey: '', // HTTPS private key path, only require when useHttps is true
+  // httpsCertificate: '', // HTTPS Certificate path, only require when useHttps is true
 
   language: 'en',
   timeFormat: 12,
@@ -42,71 +42,39 @@ var config = {
     {
       module: 'clock',
       position: 'top_right'
-    },
-    {
-      module: 'MMM-Remote-Control'
-    },
-    {
-      module: 'MMM-connection-status',
-      header: 'connection',
-      position: 'top_right',
-      config: {}
-    },
-    {
-      module: 'MMM-Online-State',
-      position: 'top_right',
-      config: {}
-    },
-    {
-      module: 'MMM-DailyPokemon',
-      position: 'top_left',
-      config: {
-        updateInterval: 30000,
-        grayscale: false,
-        minPoke: 1,
-        maxPoke: 649,
-        showType: true,
-        stats: true,
-        language: 'en',
-        genera: true,
-        gbaMode: true,
-        nameSize: 32
-      }
-    },
-    {
-      module: 'MMM-Pins',
-      config: {
-        pinConfiguration: [
-          {
-            pin: 17,
-            direction: 'in',
-            notification: 'MONITORON'
-          },
-          {
-            pin: 23,
-            direction: 'in',
-            notification: 'MONITOROFF'
-          },
-          {
-            pin: 27,
-            direction: 'in',
-            notification: 'SHOW_ALERT',
-            prettyName: 'JOYSTICK_UP'
-          },
-          {
-            pin: 22,
-            direction: 'in',
-            notification: 'SHOW_ALERT',
-            prettyName: 'JOYSTICK_DOWN'
-          }
-        ]
-      }
-    },
-    {
-      module: 'joystick',
-      position: 'bottom_bar',
-      config: {}
     }
+    // {
+    //   module: 'MMM-Remote-Control'
+    // },
+    // {
+    //   module: 'MMM-Pins',
+    //   config: {
+    //     pinConfiguration: [
+    //       {
+    //         pin: 17,
+    //         direction: 'in',
+    //         notification: 'MONITORON'
+    //       },
+    //       {
+    //         pin: 23,
+    //         direction: 'in',
+    //         notification: 'MONITOROFF'
+    //       },
+    //       {
+    //         pin: 27,
+    //         direction: 'in',
+    //         notification: 'SHOW_ALERT',
+    //         prettyName: 'JOYSTICK_UP'
+    //       },
+    //       {
+    //         pin: 22,
+    //         direction: 'in',
+    //         notification: 'SHOW_ALERT',
+    //         prettyName: 'JOYSTICK_DOWN'
+    //       }
+    //     ]
+    //   }
+    // }
   ]
 }
 
