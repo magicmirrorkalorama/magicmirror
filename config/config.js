@@ -60,68 +60,44 @@ var config = {
       }
     },
     {
-      module: 'MMM-GPIO-Notifications',
+      module: 'MMM-Pins',
       config: {
-        '17': {
-          gpio_state: 0,
-          gpio_debounce: 10,
-          notifications: [
-            {
-              notification: 'SHOW_ALERT',
-              payload: {
-                type: 'notification',
-                title: 'button press',
-                message: 'pressed gpio 17'
-              }
+        pinConfiguration: [
+          {
+            pin: 17,
+            direction: 'in',
+            notification: 'SHOW_ALERT',
+            payload: {
+              type: 'notification',
+              title: 'button press',
+              message: 'pin 17'
             }
-          ]
-        },
-        '23': {
-          gpio_state: 0,
-          gpio_debounce: 10,
-          notifications: [
-            {
-              notification: 'SHOW_ALERT',
-              payload: {
-                type: 'notification',
-                title: 'button press',
-                message: 'pressed gpio 23'
-              }
+          },
+          {
+            pin: 23,
+            direction: 'in',
+            notification: 'SHOW_ALERT',
+            payload: {
+              type: 'notification',
+              title: 'button press',
+              message: 'pin 17'
             }
-          ]
-        }
+          },
+          {
+            pin: 27,
+            direction: 'in',
+            notification: 'SHOW_ALERT'
+            // prettyName: 'JOYSTICK_UP'
+          },
+          {
+            pin: 22,
+            direction: 'in',
+            notification: 'SHOW_ALERT'
+            // prettyName: 'JOYSTICK_DOWN'
+          }
+        ]
       }
     }
-
-    // {
-    //   module: 'MMM-Pins',
-    //   config: {
-    //     pinConfiguration: [
-    //       {
-    //         pin: 17,
-    //         direction: 'in',
-    //         notification: 'MONITORON'
-    //       },
-    //       {
-    //         pin: 23,
-    //         direction: 'in',
-    //         notification: 'MONITOROFF'
-    //       },
-    //       {
-    //         pin: 27,
-    //         direction: 'in',
-    //         notification: 'SHOW_ALERT',
-    //         prettyName: 'JOYSTICK_UP'
-    //       },
-    //       {
-    //         pin: 22,
-    //         direction: 'in',
-    //         notification: 'SHOW_ALERT',
-    //         prettyName: 'JOYSTICK_DOWN'
-    //       }
-    //     ]
-    //   }
-    // },
     // {
     //   module: 'joystick',
     //   position: 'bottom_bar',
